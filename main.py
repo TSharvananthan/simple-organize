@@ -1,5 +1,6 @@
 import argparse
 from src.OrganizeByFileFormat import OrganizeByFileFormat
+from src.OrganizeByDate import OrganizeByDate
 
 'Arguments'
 argParser = argparse.ArgumentParser()
@@ -12,14 +13,11 @@ def main():
     global args
     BASEFILEPATH = args.main_branch.replace("/", "//")
 
-    object = OrganizeByFileFormat(BASEFILEPATH)
+    object = OrganizeByDate(BASEFILEPATH)
     object.getAllFiles()
-    object.print_test()
-    object.getAllFileFormats()
-    object.print_test()
+    object.getAllDays()
+    object.getAllPossibleDates()
     object.createFiles()
-    object.print_test()
-    object.moveFiles(BASEFILEPATH)
-    object.print_test()
+    object.moveFiles()
 
 main()
