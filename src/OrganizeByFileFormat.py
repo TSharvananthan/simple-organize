@@ -36,9 +36,3 @@ class OrganizeByFileFormat:
     def moveFiles(self, basefile):
         for file, format, name in zip(self.files, self.fileformats, self.filenames):
             os.replace(file, f"{basefile}\\{format}\\{name}")
-
-    def print_test(self):
-        print("self.basepath -> ", self.basepath)
-        print("self.files -> ", self.files)
-        print("self.filenames -> ", self.filenames)
-        print("self.fileformats -> ", self.fileformats)
