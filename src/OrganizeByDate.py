@@ -21,8 +21,8 @@ class OrganizeByDate:
 
     def getAllDays(self):
         for file in self.files:
-            times = [x for x in time.ctime(os.path.getctime(file)).split(" ") if not x == ""]
-            self.times.append(f"{times[0]} {times[1]} {times[2]} {times[4]}")
+            times = [x for x in time.ctime(os.path.getmtime(file)).split(" ") if not x == ""]
+            self.times.append(f"{times[4]}-{times[1]}-{times[2]}")
 
     def getAllPossibleDates(self):
         self.possible_dates = list(set(self.times))
