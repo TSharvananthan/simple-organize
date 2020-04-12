@@ -1,0 +1,4 @@
+get all the possible file formats
+make files in the main branch relating to each file
+
+get all the files of each format and move each one to its respective folder
